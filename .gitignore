@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Test and type-check caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# marimo
+__marimo__/
+
+# Node, for bundled widget frontends
+node_modules/
+
+# Agent and browser-automation artefacts
+.playwright-mcp/
+.playwright/
+playwright-report/
+blob-report/
+test-results/
+
+# Retained local-only workspace: decks, reports, captures, notes
+/.private/
+
+# Licensed terminology content and datasets must never be committed
+*.db
+*.db-wal
+*.db-shm
+*.ndjson
+*.parquet
+*.arrow
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store

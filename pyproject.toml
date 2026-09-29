@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2026 Marcus Baw and Baw Medical Ltd
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+[build-system]
+requires = ["hatchling>=1.32.4,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clinical-widgets"
+version = "0.0.0"
+description = "Interactive widgets and data adapters for clinical informatics work in reactive Python notebooks"
+authors = [{ name = "Marcus Baw", email = "marcus@bawmedical.co.uk" }]
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["clinical", "informatics", "terminology", "codelist", "snomed", "marimo", "notebook"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Typing :: Typed",
+]
+
+# The widget substrate is the only hard dependency: it is host-agnostic, so the
+# same components work in marimo, Jupyter, Shiny, and Panel. Notebook hosts,
+# dataframe engines, and terminology backends are deliberately optional, so
+# installing this package never forces a particular stack or licence on a user.
+dependencies = ["anywidget>=0.11.0,<1"]
+
+[project.optional-dependencies]
+# Local-first terminology backend. AGPL, and the reason this package is too.
+sct = ["sct-py>=0.27.0"]
+# Reactive notebook host for the intended workflow.
+marimo = ["marimo>=0.25.0"]
+# Vectorised set-membership over a dataset.
+data = ["polars>=1.44.2"]
+dev = ["pytest>=9.1.1", "ruff>=0.16.9"]
+
+[project.urls]
+Repository = "https://github.com/pacharanero/clinical-widgets"
+Issues = "https://github.com/pacharanero/clinical-widgets/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clinical_widgets"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
