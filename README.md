@@ -12,6 +12,8 @@ The pieces are meant to be small and composable:
 
 - **Concept widgets** - render any clinical code as an inspectable reference rather than a bare number. Hover or focus gives the fully specified name, preferred term, active status, and immediate hierarchy neighbours.
 - **Expression editing** - a real editor for terminology query languages, with diagnostics, rather than a plain text box.
+- **Constrained selection** - a concept picker whose candidates are defined by a constraint object (an ECL envelope, not hard-coded props), so the same constraint runs verbatim in the widget, on the CLI, and over FHIR.
+- **Wireframes** - SNOMED-aware design stubs generated from real release data, as an open SVG/Excalidraw source of truth for designers working in any tool.
 - **Codelist review** - hierarchy tree with include/exclude at branch level, and the resulting set exported back as an expression.
 - **Dataset adapters** - vectorised set-membership over a dataframe, so the effect of a change to a concept set is visible immediately.
 - **Adjudication** - label a slice of rows by hand and get an honest local metric with an interval, instead of guessing.
