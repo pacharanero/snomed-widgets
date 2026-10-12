@@ -2,7 +2,7 @@
 
 ## Status
 
-`clinical-widgets` is a pre-alpha scaffold with no release and no users. There is nothing deployed to attack, but reports are still welcome and will be acted on.
+`snomed-widgets` is a pre-alpha scaffold with no release and no users. There is nothing deployed to attack, but reports are still welcome and will be acted on.
 
 ## Supported versions
 
@@ -10,7 +10,7 @@ None yet. Once releases begin, the latest published version is supported.
 
 ## Reporting a vulnerability
 
-Report privately via [GitHub Security Advisories](https://github.com/pacharanero/clinical-widgets/security/advisories/new). If that is unavailable, email marcus@bawmedical.co.uk.
+Report privately via [GitHub Security Advisories](https://github.com/pacharanero/snomed-widgets/security/advisories/new). If that is unavailable, email marcus@bawmedical.co.uk.
 
 Please do not open a public issue for a vulnerability until it has been addressed.
 

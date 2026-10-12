@@ -1,4 +1,4 @@
-# clinical-widgets
+# snomed-widgets
 
 Interactive widgets and data adapters for clinical informatics work in reactive Python notebooks.
 
@@ -20,7 +20,7 @@ The pieces are meant to be small and composable:
 
 Terminology backends are pluggable. The first is [`sct`](https://github.com/pacharanero/sct) via its `sct-py` bindings, which makes lookups a local SQLite read with no network. A FHIR terminology adapter is planned so the widgets work against Ontoserver, Snowstorm, or any conformant server without installing `sct`.
 
-SNOMED CT is the first terminology because it is the hardest. The design is deliberately not SNOMED-specific: openEHR, FHIR, LOINC, ICD, and dm+d are all in intended scope.
+SNOMED CT is the scope, by deliberate naming decision (2026-10-11): every concrete plan for this repo is SNOMED-shaped. A SNOMED concept viewer served through the planned FHIR adapter by any conformant terminology server is still in scope; a genuinely non-SNOMED widget (say, an openEHR archetype picker) is not, and would warrant revisiting the name - cheap only while nothing is published.
 
 ## What is it not?
 
@@ -39,14 +39,14 @@ Clinical informaticians, terminologists, researchers, and analysts who already h
 Not yet installable. When it is:
 
 ```sh
-pip install clinical-widgets
+pip install snomed-widgets
 ```
 
 Development setup:
 
 ```sh
-git clone https://github.com/pacharanero/clinical-widgets
-cd clinical-widgets
+git clone https://github.com/pacharanero/snomed-widgets
+cd snomed-widgets
 pip install -e '.[dev]'
 ```
 

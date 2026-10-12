@@ -9,7 +9,7 @@ notebook.
 
 import importlib.metadata
 
-import clinical_widgets
+import snomed_widgets
 
 
 def test_package_imports_without_a_terminology_backend():
@@ -18,10 +18,10 @@ def test_package_imports_without_a_terminology_backend():
     Backends are optional extras. If importing the top-level package ever starts
     requiring ``sct_py`` or any other backend, the adapter boundary has leaked.
     """
-    assert clinical_widgets.__version__
+    assert snomed_widgets.__version__
 
 
 def test_declared_version_matches_installed_metadata():
     """Catch the usual drift between ``__version__`` and the built distribution."""
-    installed = importlib.metadata.version("clinical-widgets")
-    assert clinical_widgets.__version__ == installed
+    installed = importlib.metadata.version("snomed-widgets")
+    assert snomed_widgets.__version__ == installed

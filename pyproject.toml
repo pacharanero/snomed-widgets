@@ -6,7 +6,7 @@ requires = ["hatchling>=1.32.4,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "clinical-widgets"
+name = "snomed-widgets"
 version = "0.0.0"
 description = "Interactive widgets and data adapters for clinical informatics work in reactive Python notebooks"
 authors = [{ name = "Marcus Baw", email = "marcus@bawmedical.co.uk" }]
@@ -44,11 +44,11 @@ data = ["polars>=1.44.2"]
 dev = ["pytest>=9.1.1", "ruff>=0.16.9"]
 
 [project.urls]
-Repository = "https://github.com/pacharanero/clinical-widgets"
-Issues = "https://github.com/pacharanero/clinical-widgets/issues"
+Repository = "https://github.com/pacharanero/snomed-widgets"
+Issues = "https://github.com/pacharanero/snomed-widgets/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/clinical_widgets"]
+packages = ["src/snomed_widgets"]
 
 [tool.ruff.lint]
 select = [

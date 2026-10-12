@@ -1,6 +1,6 @@
 # Agent instructions
 
-`clinical-widgets` provides interactive widgets and data adapters for clinical informatics work in reactive Python notebooks, starting with marimo. It is a presentation and analysis layer: it renders clinical codes as inspectable references, edits terminology expressions, reviews codelists, and shows the effect of a concept set on a dataset. It is **not** a terminology engine, not clinical decision support, and not a patient data store. Terminology semantics belong to the backend, never to this repo.
+`snomed-widgets` provides interactive widgets and data adapters for clinical informatics work in reactive Python notebooks, starting with marimo. It is a presentation and analysis layer: it renders clinical codes as inspectable references, edits terminology expressions, reviews codelists, and shows the effect of a concept set on a dataset. It is **not** a terminology engine, not clinical decision support, and not a patient data store. Terminology semantics belong to the backend, never to this repo.
 
 ## Read first
 

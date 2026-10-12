@@ -14,13 +14,13 @@ What this buys: an independent dependency graph (npm, Monaco, marimo, and a data
 
 ## Naming
 
-`clinical-widgets`, deliberately dull and descriptive.
+`snomed-widgets`, deliberately dull and descriptive. Decided 2026-10-11 (decision 2, below).
 
-Not named after marimo, because the widgets are `anywidget`-based and therefore host-portable across marimo, Jupyter, Shiny, and Panel. Naming the current host as if it were the product would contradict a documented future direction.
+**Decision 1 (2026-09-29): `clinical-widgets`.** Chosen to keep the name host-agnostic (not `marimo-*` - the widgets are `anywidget`-based and host-portable across marimo, Jupyter, Shiny, and Panel) and scope-honest (not `terminology-widgets` - openEHR is an information model rather than a terminology). Accepted cost: "clinical" is so broad the name explains almost nothing.
 
-Not named after terminology, because the intended scope includes openEHR, which is an information model rather than a terminology. SNOMED CT is the first target because it is the hardest, not because it is the boundary. FHIR, LOINC, ICD, and dm+d are all in scope.
+**Decision 2 (2026-10-11): renamed to `snomed-widgets`.** The same standard that made "clinical" feel safe - covering systems that might someday exist - also made it vague. Honest re-examination: every concrete consumer in every concrete plan is SNOMED-shaped (the notebook workbench for the next competition, `sct`'s `R38` atlas, and even the FHIR-against-external-server path, which exists to serve SNOMED without installing `sct`) - while openEHR/LOINC/ICD/dm+d scope has no owner and no delivery window, and by this project's own promotion standard aspiration does not earn permanent name real estate. `sct-widgets` was rejected: it names the backend rather than the domain, contradicting the adapter decision that widgets work for people who have never installed `sct`. Consequences, recorded so they are deliberate rather than drift: the committed scope is SNOMED; other code systems (including FHIR as a transport) stay in scope only where the widget remains concept-shaped - a SNOMED concept viewer served by any conformant FHIR terminology server is still a SNOMED story - and a genuinely non-SNOMED widget (e.g. an openEHR archetype picker) would warrant revisiting the name again, which is cheap only before the first PyPI release: this choice locks at first publish.
 
-Accepted cost: "widgets" undersells the adapter, dataset, and scoring layers that sit behind the visual components.
+Accepted cost (unchanged): "widgets" undersells the adapter, dataset, and scoring layers that sit behind the visual components.
 
 ## Licence
 
